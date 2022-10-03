@@ -1,0 +1,42 @@
+#circle{
+    width: 10vmax;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: #c87900;
+    border: 6px solid #329900;
+    transition: transform 2s, border 4s;
+
+}
+
+#circle:hover{
+    transform: scale(200%) translate(5vmax, 0px);
+    border: 25px solid #5500a9;
+}
+
+#circle2{
+    width: 10vmax;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: #329900;
+
+    transition: transform 2s, background-color 2s;
+}
+
+#click:focus ~ #circle2{
+    transform: translate(10vmax, 0px);
+}
+
+#click2:focus ~ #circle2{
+    background-color: maroon;
+}
+
+@keyframes wiggle {0%{left:0; top:0;background-color: maroon} 50%{left: 250px; top: 200px; background-color: #329900} 100% {left:0; top:0;background-color: #c87900}}
+
+#circle3{
+    position: relative;
+    width: 10vmax;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: maroon;
+    animation: wiggle 5s ease-in infinite;
+}
